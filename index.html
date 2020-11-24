@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head class="inner-container">
+
+    <!-- Тема: Различные способы управления сетью. Управление сетью с рабочей станции и с консоли сервера -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap 4 styles -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+    <!-- Compiled styles from sass -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!-- Name of project -->
+    <title>Курсовой проект</title>
+
+    <style>
+        @media screen and (min-width: 768px) {
+            #landing {
+                background-size: 100% 100% !important;
+            }
+        }
+    </style>
+
+</head>
+<body id="landing">
+
+
+<div class="app">
+
+    <header class="container pt-md-3 pt-4">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a class="navbar-brand" href="#" id="logotype">Сертификация</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pr-md-4" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active pl-md-3">
+                        <a class="nav-link transition" href="index.html">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="documentation.html">Учебник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="testing.html">Тестирование</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="land-main container">
+        <div class="jumbotron-fluid">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 class="bold main-text">Электронный учебник</h2>
+                    <h2 class="bold main-text">Тескт текст текст</h2>
+                    <p class="lead mt-4">
+                        <a class="btn btn-danger btn-lg transition" href="documentation.html" role="button">
+                        <span class="d-flex">
+        <!--                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>play</title><g fill-rule="nonzero" fill="none"><path d="M12 .75C5.79.75.75 5.79.75 12S5.79 23.25 12 23.25 23.25 18.21 23.25 12 18.21.75 12 .75z" stroke="#FF2D20" stroke-width="1.5"/><path fill="#FF2D20" d="M9 18l8-6-8-6z"/></g></svg>-->
+                            <span style="font-size: 1em">Открыть учебник</span>
+                        </span>
+                        </a>
+                    </p>
+                    <br>
+                    <h5>Выполнил: Прытков Д.О</h5>
+                    <h5>Руководитель: Земскова</h5>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</div>
+
+
+<!-- jQuery v3.4.1   -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap 4 scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+    var TxtRotate = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+
+
+</script>
+
+<script src="js/transition.js"></script>
+
+</body>
+</html>

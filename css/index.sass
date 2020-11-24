@@ -1,0 +1,160 @@
+$dark_blue: #0f054c
+
+*
+  font-family: Montserrat-Regular, sans-serif !important
+  color: white
+
+.bold
+  font-family: Montserrat-Bold, sans-serif !important
+  font-weight: bold
+
+hr
+  height: 1px !important
+  background-color: #979896
+
+html
+  overflow-y: scroll
+  overflow-x: hidden
+
+html, body, .app
+  width: 100%
+  height: 100% !important
+
+body
+  background-color: $dark_blue
+
+#landing
+  background-image: url("../img/land-background.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+
+// HEADER
+
+#logotype
+  font-family: Montserrat-Bold, sans-serif !important
+  font-weight: bold
+  font-size: 2em
+
+#navbarSupportedContent
+  font-family: Montserrat-Bold, sans-serif !important
+  font-weight: bold
+  font-size: 1.2em
+
+// HEADER-END
+
+
+// MAIN
+
+.land-main
+  padding-top: 200px
+
+// MAIN-END
+
+
+// FOOTER
+
+footer
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 20px
+
+// FOOTER-END
+
+
+// MEDIA
+@media screen and (max-width: 768px)
+  .btn-2
+    width: 100%
+
+@media screen and (max-width: 600px)
+  .land-main
+    padding-top: 50px
+      //font-size: 2em !important
+
+@media screen and (max-width: 430px)
+  #logotype
+    font-size: 1.4em
+  .land-main
+    .main-text
+      font-size: 1.4em !important
+
+@media screen and (max-width: 315px)
+  #logotype
+    font-size: 1em
+
+// MEDIA-END
+
+
+
+// documentation.html
+//    background: linear-gradient(0deg,#fff,#f5f5fa);
+
+.main
+  &__menu
+    color: black !important
+    //position: fixed
+
+    &__item .link-in-container
+      padding: 10px 10px 15px
+      transition: 0.20s all ease
+
+    &__item
+      padding-bottom: 15px
+      color: black !important
+      list-style-type: none
+
+      > div > div
+        padding-top: 15px
+
+    &__item a
+
+      color: black !important
+      text-decoration: none
+      transition: 0.20s all ease
+
+    //&__item .link-in
+      //123
+
+    &__item .link-in-container:active
+      padding-left: 15px
+
+    .no-touch &__item .link-in-container:hover
+      padding-left: 15px
+
+    //&__item .link-in-container:before
+    //  padding-left: 0
+
+    &__item .bold-link
+      //font-family: Montserrat-Bold, sans-serif !important
+      font-weight: bold
+      color: black !important
+      text-decoration: none
+
+    &__item .bold-link-container
+      transition: 0.20s all ease
+
+    .no-touch &__item .bold-link-container:hover
+      padding-left: 5px
+
+    &__item .bold-link-container:active
+      padding-left: 5px
+
+
+  &__content
+    color: black !important
+
+    &__header
+      font-family: Montserrat-Bold, sans-serif !important
+
+    *
+      color: black !important
+
+    #frame
+      border: none
+      width: 100% !important
+      height: 3000px
+      *
+        overflow-y: hidden !important
+

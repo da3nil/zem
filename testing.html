@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <!-- Тема: Различные способы управления сетью. Управление сетью с рабочей станции и с консоли сервера -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap 4 styles -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+    <!-- Compiled styles from sass -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!-- Form style -->
+    <link rel="stylesheet" href="css/form.css">
+
+    <title>Курсовой проект</title>
+
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="app">
+
+    <header class="container pt-md-3 pt-4">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a class="navbar-brand" href="#" style="" id="logotype">Курсовой проект</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pr-md-4" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="index.html">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="documentation.html">Документация</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link transition" href="testing.html">Тестирование</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main pt-md-3">
+        <div class="container">
+            <div  id="result-container" class="text-center" style="display: none; margin: 100px auto;
+                width: 70%;
+                min-width: 300px;">
+                <h1>Ваш результат: <span id="result">0</span> из 10</h1>
+                <h3 style="display: none;" id="success" class="">Вы успешно усвоили материал</h3>
+                <h3 style="display: none;" id="fail" class="">Вы плохо усвоили материал</h3>
+            </div>
+            <form id="regForm" action="">
+
+                <div class="tab">
+                    <h1>1. Для передачи файлов по сети используется протокол</h1>
+                    <label>
+                        <input type="radio" name="v1" value="1" data-true="0"> POP3
+                    </label>
+                    <label>
+                        <input type="radio" name="v1" value="2" data-true="0"> CMPT
+                    </label>
+                    <label>
+                        <input type="radio" name="v1" value="3" data-true="1"> FTP
+                    </label>
+                </div>
+
+                <div class="tab">
+                    <h1>2. Что такое "компьютерная сеть"?</h1>
+                    <label>
+                        <input type="radio" name="v2" value="1" data-true="1"> Совокупность узлов соединённых между собой
+                    </label>
+                    <label>
+                        <input type="radio" name="v2" value="2" data-true="0"> Музыкальный инструмент
+                    </label>
+                    <label>
+                        <input type="radio" name="v2" value="3" data-true="0"> Это удобная утилита командной строки
+                    </label>
+                </div>
+
+                <div class="tab">
+                    <h1>3. Какого уровня является протокол SNMP?</h1>
+                    <label>
+                        <input type="radio" name="v3" value="1" data-true="0"> Сетевого
+                    </label>
+                    <label>
+                        <input type="radio" name="v3" value="2" data-true="1"> Прикладного
+                    </label>
+                    <label>
+                        <input type="radio" name="v3" value="3" data-true="0"> Сеансового
+                    </label>
+                </div>
+
+                <div class="tab">
+                    <h1>4. Цель управления эффективностью?</h1>
+                    <label>
+                        <input type="radio" name="v4" value="1" data-true="0"> Эффективно поддерживать работу сети.
+                    </label>
+                    <label>
+                        <input type="radio" name="v4" value="2" data-true="0"> Сделать невозможными саботаж сети и доступ к чувствительной информации лицам, не имеющим соответствующего разрешения.
+                    </label>
+                    <label>
+                        <input type="radio" name="v4" value="3" data-true="1"> Поддерживание эфективности на приемлемом уровне.
+                    </label>
+                </div>
+
+                <div class="tab">
+                    <h1>5. Компьютер, подключенный к сети Internet, обязательно имеет</h1>
+                    <label>
+                        <input type="radio" name="v5" value="1" data-true="0"> URL-адрес
+                    </label>
+                    <label>
+                        <input type="radio" name="v5" value="2" data-true="1"> IP-адрес
+                    </label>
+                    <label>
+                        <input type="radio" name="v5" value="3" data-true="0"> WEB-страницу;
+                    </label>
+                </div>
+
+                <div class="tab">
+                    <h1>6. На какой ОС легче поддерживать работу сети?</h1>
+                    <label>
+                        <input type="radio" name="v6" value="1" data-true="1"> Windows
+                    </label>
+                    <label>
+                        <input type="radio" name="v6" value="2" data-true="1"> Linux
+                    </label>
+                    <label>
+                        <input type="radio" name="v6" value="3" data-true="0"> Mac OS
+                    </label>
+                </div>
+
+                <div class="tab">
+                    <h1>7. Протокол – это</h1>
+                    <label><input type="radio" name="v7" value="1" data-true="0"> Способность компьютера посылать файлы через каналы передачи информации</label>
+                    <label><input type="radio" name="v7" value="2" data-true="0"> Устройство для работы локальной сети</label>
+                    <label><input type="radio" name="v7" value="3" data-true="1"> Стандарт передачи данных через компьютерную сеть</label>
+                 </div>
+
+
+                <div class="tab">
+                    <h1>8. Программа удаленного доступа рабочего стола</h1>
+                    <label><input type="radio" name="v8" value="1" data-true="1"> UltraVNC</label>
+                    <label><input type="radio" name="v8" value="2" data-true="0"> Telegram</label>
+                    <label><input type="radio" name="v8" value="3" data-true="0"> Total Commander</label>
+                </div>
+
+                <div class="tab">
+                    <h1>9. Протокол HTTP служит для:</h1>
+                    <label><input type="radio" name="v9" value="1" data-true="1"> Передачи гипертекста</label>
+                    <label><input type="radio" name="v9" value="2" data-true="0"> Передачи файлов</label>
+                    <label><input type="radio" name="v9" value="3" data-true="0"> Запуска программы с удаленного компьютера</label>
+                </div>
+
+                <div class="tab">
+                    <h1>10. Сетевое приложение – приложение</h1>
+                    <label><input type="radio" name="v10" value="1" data-true="0"> Распределенное</label>
+                    <label><input type="radio" name="v10" value="2" data-true="0"> Устанавливаемое для работы пользователем сети на свой компьютер</label>
+                    <label><input type="radio" name="v10" value="3" data-true="1"> Каждая часть которого выполнима на каждом сетевом компьютере</label>
+                </div>
+
+
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button class="btn-2" style="color: black !important;" type="button" id="prevBtn" onclick="nextPrev(-1)">Предыдущий</button>
+                        <button class="btn-2" style="color: black !important;" type="button" id="nextBtn" onclick="nextPrev(1)">Следующий</button>
+                    </div>
+                </div>
+
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer></footer>
+</div>
+
+
+<!-- jQuery v3.4.1   -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap 4 scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- Transition -->
+<script src="js/transition.js"></script>
+
+<!-- Form Handle-->
+<script src="js/form-handle.js">
+
+</script>
+
+</body>
+</html>

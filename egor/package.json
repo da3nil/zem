@@ -1,0 +1,8 @@
+{
+	"name": "site",
+	"author": "Miruki Team",
+	"scripts": {
+		"start": "./index.html"
+	},
+	"license": "MIT"
+}

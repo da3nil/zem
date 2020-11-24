@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <!-- Тема: Различные способы управления сетью. Управление сетью с рабочей станции и с консоли сервера -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap 4 styles -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+    <!-- Compiled styles from sass -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gor-scroll.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <title>Курсовой проект</title>
+
+    <style>
+        .main__menu__item {
+            line-height: 1.2;
+        }
+
+        .main__menu__item a {
+            display: inline-block;
+            font-size: 0.74rem;
+            /*font-weight: bold;*/
+            line-height: 1.2;
+        }
+
+        .main__menu__item .active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="" style="background-color: white;">
+
+<div class="app">
+    <header class="container pt-md-3 pt-4">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand" href="#" style="color: #ff2d20" id="logotype">Сертификация</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pr-md-4" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="index.html">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link transition" href="documentation.html">Учебник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition" href="testing.html">Тестирование</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main pt-md-3">
+
+<!--        <hr>-->
+<!--        <div class="container-fluid">-->
+<!--            <div class="container">-->
+<!--                <h4 style="color: black">Лекция: <span style="color: black" id="name-lesson"></span></h4>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <hr class="mb-0">-->
+
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-md-3" style="height: 75vh !important; overflow-x: auto;">
+                    <div class="h-100">
+                        <div class="main__menu" id="articleControlls">
+                            <ul id="accordion" class="p-0 d-flex flex-column text-sticky">
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="1">Основные стандарты, характеризующие жизненный цикл программного средства. Модели жизненного цикла программных средств</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="2">Основные понятия в области метрологии. Основные положения метрологии программного продукта.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="3">Основы технических измерений. Принципы построения, структуры и приемы работы с инструментальными средствами, поддерживающими создание программного обеспечения.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="4">Принципы построения, проектирования и использования средств для измерений характеристик и параметров программ, программных средств и комплексов.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="5">Государственная система обеспечения единства измерений (ГСН). Государственный контроль и надзор. Проблемы и задачи в области метрологии на современном этапе.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="6">Основные понятия в области оценки соответствия и сертификации.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="7">Сертификация как процедура подтверждения соответствия. Влияние качества обслуживания на развития информационных технологий и бизнес телекоммуникационных компаний.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="8">Основные тенденции развития нормативной базы в мире и в России в области информационных технологий. Основные направления комплексов работ, который необходимо провести в России.</a>
+                                </li>
+                                <li class="main__menu__item">
+                                    <a href="#" data-index="9">Государственный контроль и надзор за соблюдением государственных стандартов, правил обязательной сертификации и за сертифицированной продукцией. Состояние и перспективы развитие сертификации и других форм подтверждения соответствия.</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 h-100" style="" id="kurs">
+                    <div class="main__content h-100">
+                        <div class="main__content_container p-2 h-100">
+                            <iframe style="height: 75vh;" id="ViewPDF" src="docs/ГСИ.pdf" frameborder="0" width="100%" height="100%"></iframe>
+<!--                            <iframe frameborder="0" id="frame" src="" scrolling="no"></iframe>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</div>
+
+<!-- jQuery v3.4.1   -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap 4 scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- Works with documentation-->
+<!--<script src="js/doc-core.js"></script>-->
+
+<!-- Transitions-->
+<script src="js/transition.js"></script>
+
+<!-- Gorizontal scroll-->
+<!--<script src="js/gorizontal-scroll.js"></script>-->
+
+<script>
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+        console.log('this is a touch device');
+    } else {
+        console.log('this is not a touch device');
+        document.body.classList.add('no-touch');
+    }
+</script>
+
+<script>
+    // console.log("Автокоррекция высоты фрейма");
+    // var iframe = $("#frame");
+    // var additionHeight = 3000;
+    // iframe.height($(document.body).height() + additionHeight);
+</script>
+
+<script>
+    var prevent = $(".bold-link")[0];
+    $(".bold-link-container a, .link-in-container a").click(function (event) {
+        prevent.style.textDecoration = 'none';
+        var e = event.target;
+        prevent = e;
+        e.style.textDecoration = 'underline';
+    });
+</script>
+
+<script>
+    const articleBtnControlls = document.getElementById("articleControlls").querySelectorAll("a")
+
+    const changeContentInPDF = (e) => {
+        e.preventDefault();
+        document.querySelector('.active').classList.remove('active');
+        e.target.classList.add('active');
+        document.getElementById("ViewPDF").setAttribute("src", `./docs/${e.target.dataset.index}.pdf`);
+    }
+
+    for (const button of articleBtnControlls) {
+        button.addEventListener("click", changeContentInPDF)
+    }
+
+</script>
+
+</body>
+</html>
